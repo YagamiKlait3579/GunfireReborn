@@ -1,2 +1,8 @@
 ﻿;;;;;;;;;; Advanced settings ;;;;;;;;;;
-EditAdvancedSettings := False
+EditAdvancedSettings := True
+
+;;;;;;;;;; Radioactive Gauntlet ;;;;;;;;;;
+RG_Color     = d2d2dc           ; Цвет триггера в формате HEX
+RG_A_Color  := 5                ; Допустимый разброс точности цвета (отклонение)
+ScreenRatio := [0.5382, 0.4999] ; Координаты поиска (процент ширины и высоты окна игры от левого верхнего угла)
+SizeArea    := [10, 1]          ; Размер области поиска (ширина и высота в пикселях)
