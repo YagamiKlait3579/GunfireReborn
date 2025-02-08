@@ -126,7 +126,7 @@ Return
                 }
                 if A_Function
                     gFunctions[A_Function].call()
-                fDebugGui("Edit", "Cycle time", TimePassed(A_Stamp))
+                fDebugGui("Edit", "Cycle time", TimePassed(A_Stamp) " ms")
         }
         ScriptStatus("Stop")
     }
