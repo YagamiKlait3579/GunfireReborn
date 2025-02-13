@@ -13,7 +13,7 @@
 
     fWinGetClientPos(winTitle) {
         if !hWnd := WinExist(winTitle)  {
-           MsgBox, winTitle is wrong
+            MsgBox, 16, fWinGetClientPos, winTitle is wrong
            Return
         }
         VarSetCapacity(WINDOWINFO, 60, 0)
