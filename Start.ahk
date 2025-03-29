@@ -1,5 +1,6 @@
 ﻿;;;;;;;;;; Loading ;;;;;;;;;;
-    #include %A_Scriptdir%\libs\BaseLibs\Header.ahk
+    #include %A_Scriptdir%\libs\CoreLibsFor_AHK\BaseLibs\Header.ahk
+    ;--------------------------------------------------
     #IfWinActive, Gunfire Reborn
     global PWN := "Gunfire Reborn" ; Program window name
     OnExit("BeforeExiting")
