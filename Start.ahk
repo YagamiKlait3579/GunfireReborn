@@ -3,13 +3,13 @@
     ;--------------------------------------------------
     #IfWinActive, Gunfire Reborn
     global PWN := "Gunfire Reborn" ; Program window name
+    CheckForUpdates("YagamiKlait3579", "GunfireReborn", "main", CheckingFiles("File", False, "Header.ahk"))
     OnExit("BeforeExiting")
 
 ;;;;;;;;;; Setting ;;;;;;;;;;
 
 ;;;;;;;;;; Variables ;;;;;;;;;;
-    CheckingFiles(,"SavedSettings.ini")
-    LoadIniSection(FP_SavedSettings, "Gunfire Reborn")
+    LoadIniSection(CheckingFiles("File", True, "SavedSettings.ini"), "Gunfire Reborn")
     ;--------------------------------------------------
     gNameKey := [AbilityB_Key, AbilityA_Key, ShiftB_Key, Jump_Key]
     global gStatusKey := []
@@ -160,7 +160,7 @@ Return
     BeforeExiting() {
         global
         for A_Loop, A_key in ["AbilityB_Status", "AbilityA_Status", "Shift_Status", "Jump_Status"]
-            IniWrite, % gStatusKey[A_Loop] , %FP_SavedSettings%, Gunfire Reborn, %A_key%
-        IniWrite, %WorkingMethod%, %FP_SavedSettings%, Gunfire Reborn, WorkingMethod
-        IniWrite, %A_Function%, %FP_SavedSettings%, Gunfire Reborn, A_Function
+            IniWrite, % gStatusKey[A_Loop] , %OP_SavedSettings%, Gunfire Reborn, %A_key%
+        IniWrite, %WorkingMethod%, %OP_SavedSettings%, Gunfire Reborn, WorkingMethod
+        IniWrite, %A_Function%, %OP_SavedSettings%, Gunfire Reborn, A_Function
     }
